@@ -62,12 +62,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 40px;
+    padding: 40px 60px;
     position: relative;
+    background-image:
+      linear-gradient(rgba(248,247,244,0.55), rgba(248,247,244,0.55)),
+      url('img/hero.jpg');
+    background-size: cover;
+    background-position: center 25%;
   }
   .hero h1 {
     font-size: clamp(2.8rem, 7vw, 5rem);
     line-height: 1.1;
+    text-shadow: 0 2px 18px rgba(248,247,244,0.8);
   }
   .hero p {
     margin-top: 18px;
