@@ -6,204 +6,52 @@
 <title>Maria Murgiondo Leturiaga — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1a3168;
-    --lime: #a8d94a;
-    --bg: #f8f7f4;
-    --text: #2b2b2b;
-    --muted: #6b6b6b;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-  h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.08em;
-    color: var(--navy);
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  a { color: var(--navy); }
-  section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 90px 40px;
-  }
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(248,247,244,0.95);
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    padding: 18px 0;
-    z-index: 10;
-    border-bottom: 1px solid #e5e3dd;
-  }
-  nav a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text);
-  }
-  nav a:hover { color: var(--navy); }
-
-  /* HERO */
-  .hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 60px;
-    position: relative;
-    background-image:
-      linear-gradient(rgba(248,247,244,0.55), rgba(248,247,244,0.55)),
-      url('img/hero.jpg');
-    background-size: cover;
-    background-position: center 25%;
-  }
-  .hero h1 {
-    font-size: clamp(2.8rem, 7vw, 5rem);
-    line-height: 1.1;
-    text-shadow: 0 2px 18px rgba(248,247,244,0.8);
-  }
-  .hero p {
-    margin-top: 18px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-
-  /* WHO AM I */
-  #sobre-mi p { margin-bottom: 18px; max-width: 640px; color: var(--text); }
-
-  /* EXPERIENCE */
-  .exp-item { margin-bottom: 40px; }
-  .exp-item .meta {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: baseline;
-    margin-bottom: 6px;
-  }
-  .exp-item h3 { font-size: 1.4rem; letter-spacing: 0.02em; }
-  .exp-item .role { font-family: 'Poppins'; font-weight: 500; color: var(--text); }
-  .exp-item .date { color: var(--muted); font-size: 0.85rem; }
-  .exp-item ul { padding-left: 20px; margin-top: 8px; }
-  .exp-item li { margin-bottom: 6px; }
-  .exp-item li::marker { color: var(--lime); }
-
-  /* GRID (education / languages) */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-  }
-  .edu-item { margin-bottom: 24px; }
-  .edu-item .school { color: var(--muted); font-size: 0.9rem; }
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e3dd;
-  }
-  .lang-item span:first-child { font-weight: 500; }
-  .lang-item span:last-child { color: var(--lime); font-weight: 600; }
-
-  /* PROJECTS */
-  .project-card {
-    border: 1px solid var(--navy);
-    border-radius: 2px;
-    padding: 32px;
-    margin-bottom: 28px;
-  }
-  .project-card .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
-  .project-card h3 { font-size: 1.6rem; }
-  .project-card .role { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
-  .project-card .skills { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill-tag {
-    background: #eef3d6;
-    color: #4c661c;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-  }
-
-  /* CONTACT */
-  footer {
-    background: var(--navy);
-    color: #fff;
-    text-align: center;
-    padding: 70px 40px;
-  }
-  footer h2 { color: #fff; margin-bottom: 20px; }
-  footer a { color: var(--lime); text-decoration: none; }
-  footer .contact-line { margin: 6px 0; color: #d7dcec; }
-
-  @media (max-width: 700px) {
-    .grid-2 { grid-template-columns: 1fr; }
-    section { padding: 60px 22px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#experiencia">Experiencia</a>
-  <a href="#formacion">Formación</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#contacto">Contacto</a>
+  <a href="#sobre-mi" data-i18n="nav-sobre">Sobre mí</a>
+  <a href="#experiencia" data-i18n="nav-experiencia">Experiencia</a>
+  <a href="#formacion" data-i18n="nav-formacion">Formación</a>
+  <a href="#proyectos" data-i18n="nav-proyectos">Proyectos</a>
+  <a href="#galeria" data-i18n="nav-galeria">Galería</a>
+  <a href="#contacto" data-i18n="nav-contacto">Contacto</a>
+  <button id="lang-toggle" class="lang-toggle" onclick="cambiarIdioma()">EN</button>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
   <h1>Maria<br>Murgiondo<br>Leturiaga</h1>
-  <p>Comunicación &amp; Marketing · Portfolio</p>
+  <p data-i18n="hero-tag">Comunicación &amp; Marketing · Portfolio</p>
 </section>
 
 <!-- SOBRE MI -->
 <section id="sobre-mi">
-  <h2>¿Quién soy?</h2>
+  <h2 data-i18n="sobre-titulo">¿Quién soy?</h2>
   <br>
-  <p>Profesional de comunicación y marketing con experiencia en generación de contenidos, coordinación de campañas y gestión de proveedores externos en una división de emprendimiento municipal, además de conocimientos de SEO y SEM aplicados en un proyecto propio y en mi Trabajo de Fin de Grado.</p>
-  <p>He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto, desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.</p>
-  <p>Bilingüe en euskera y español, con inglés avanzado (C1) y alta capacidad de adaptación. Actualmente combinando mi perfil de comunicación con conocimientos técnicos del Máster en Desarrollo Full Stack (Angular, Node.js).</p>
+  <p data-i18n="sobre-p1">Profesional de comunicación y marketing con experiencia en generación de contenidos, coordinación de campañas y gestión de proveedores externos en una división de emprendimiento municipal, además de conocimientos de SEO y SEM aplicados en un proyecto propio y en mi Trabajo de Fin de Grado.</p>
+  <p data-i18n="sobre-p2">He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto, desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.</p>
+  <p data-i18n="sobre-p3">Bilingüe en euskera y español, con inglés avanzado (C1) y alta capacidad de adaptación. Actualmente combinando mi perfil de comunicación con conocimientos técnicos del Máster en Desarrollo Full Stack (Angular, Node.js).</p>
 </section>
 
 <!-- EXPERIENCIA -->
 <section id="experiencia">
-  <h2>Experiencia</h2>
+  <h2 data-i18n="experiencia-titulo">Experiencia</h2>
   <br>
   <div class="exp-item">
     <div class="meta">
       <h3>ScaleUp Porto</h3>
-      <span class="date">Ene 2026 – Jul 2026</span>
+      <span class="date" data-i18n="exp1-fecha">Ene 2026 – Jul 2026</span>
     </div>
-    <div class="role">Junior Project Manager — Comunicación y Marketing · División de Emprendimiento, Ayuntamiento de Oporto</div>
+    <div class="role" data-i18n="exp1-rol">Junior Project Manager — Comunicación y Marketing · División de Emprendimiento, Ayuntamiento de Oporto</div>
     <ul>
-      <li>Generación y redacción de contenidos para newsletter, blog y presentaciones institucionales.</li>
-      <li>Coordinación con agencias externas en la revisión y ajuste de contenidos e identidad visual.</li>
-      <li>Diseño e impulso de una estrategia de marca (imagen, propuesta de valor, mensajes) por iniciativa propia.</li>
-      <li>Elaboración de un toolkit editorial de inversión, incluyendo investigación y redacción estructurada.</li>
-      <li>Representación de ScaleUp Porto en ferias de empleo, gestionando el stand y la relación con candidatos.</li>
-      <li>Seguimiento y análisis de convocatorias y oportunidades de financiación para startups.</li>
+      <li data-i18n="exp1-li1">Generación y redacción de contenidos para newsletter, blog y presentaciones institucionales.</li>
+      <li data-i18n="exp1-li2">Coordinación con agencias externas en la revisión y ajuste de contenidos e identidad visual.</li>
+      <li data-i18n="exp1-li3">Diseño e impulso de una estrategia de marca (imagen, propuesta de valor, mensajes) por iniciativa propia.</li>
+      <li data-i18n="exp1-li4">Elaboración de un toolkit editorial de inversión, incluyendo investigación y redacción estructurada.</li>
+      <li data-i18n="exp1-li5">Representación de ScaleUp Porto en ferias de empleo, gestionando el stand y la relación con candidatos.</li>
+      <li data-i18n="exp1-li6">Seguimiento y análisis de convocatorias y oportunidades de financiación para startups.</li>
     </ul>
   </div>
   <div class="exp-item">
@@ -211,94 +59,112 @@
       <h3>LEINN Companies</h3>
       <span class="date">2020 – 2024</span>
     </div>
-    <div class="role">Cofundadora y Responsable de Gestión · Mondragon Team Academy</div>
+    <div class="role" data-i18n="exp2-rol">Cofundadora y Responsable de Gestión · Mondragon Team Academy</div>
     <ul>
-      <li>Cofundación y gestión de dos empresas reales con clientes activos e ingresos en marcha.</li>
-      <li>Gestión del posicionamiento SEO de la web de la empresa y planificación de proyectos con clientes.</li>
-      <li>Coordinación de equipo, seguimiento de objetivos y preparación de entregables y presentaciones.</li>
-      <li>Liderazgo de la gestión financiera y de clientes en seis proyectos de startups.</li>
+      <li data-i18n="exp2-li1">Cofundación y gestión de dos empresas reales con clientes activos e ingresos en marcha.</li>
+      <li data-i18n="exp2-li2">Gestión del posicionamiento SEO de la web de la empresa y planificación de proyectos con clientes.</li>
+      <li data-i18n="exp2-li3">Coordinación de equipo, seguimiento de objetivos y preparación de entregables y presentaciones.</li>
+      <li data-i18n="exp2-li4">Liderazgo de la gestión financiera y de clientes en seis proyectos de startups.</li>
     </ul>
   </div>
 </section>
 
 <!-- FORMACION Y LANGUAGES -->
 <section id="formacion">
-  <h2>Formación &amp; Idiomas</h2>
+  <h2 data-i18n="formacion-titulo">Formación &amp; Idiomas</h2>
   <br>
   <div class="grid-2">
     <div>
+      <h3 class="col-title" data-i18n="col-formacion">Formación</h3>
       <div class="edu-item">
-        <h3>Máster en Desarrollo Full Stack</h3>
+        <h3 data-i18n="edu1-titulo">Máster en Desarrollo Full Stack</h3>
         <div class="school">UNIR, Universidad Internacional de La Rioja · 2025–2026</div>
       </div>
       <div class="edu-item">
-        <h3>Grado en LEINN</h3>
-        <div class="school">Liderazgo, Emprendimiento e Innovación · Mondragon Unibertsitatea · 2020–2024</div>
+        <h3 data-i18n="edu2-titulo">Grado en LEINN</h3>
+        <div class="school" data-i18n="edu2-escuela">Liderazgo, Emprendimiento e Innovación · Mondragon Unibertsitatea · 2020–2024</div>
       </div>
       <div class="edu-item">
-        <h3>Bachillerato Científico</h3>
+        <h3 data-i18n="edu3-titulo">Bachillerato Científico</h3>
         <div class="school">Elkar Hezi Ikastetxea · 2018–2020</div>
       </div>
     </div>
     <div>
-      <div class="lang-item"><span>Español</span><span>Nativo</span></div>
-      <div class="lang-item"><span>Euskera</span><span>C1 · EGA</span></div>
-      <div class="lang-item"><span>Inglés</span><span>C1</span></div>
-      <div class="lang-item"><span>Portugués</span><span>Básico</span></div>
+      <h3 class="col-title" data-i18n="col-idiomas">Idiomas</h3>
+      <div class="lang-item"><span data-i18n="lang-es">Español</span><span data-i18n="lang-es-nivel">Nativo</span></div>
+      <div class="lang-item"><span data-i18n="lang-eu">Euskera</span><span>C1 · EGA</span></div>
+      <div class="lang-item"><span data-i18n="lang-en">Inglés</span><span>C1</span></div>
+      <div class="lang-item"><span data-i18n="lang-pt">Portugués</span><span data-i18n="lang-pt-nivel">Básico</span></div>
     </div>
   </div>
 </section>
 
 <!-- PROYECTOS -->
 <section id="proyectos">
-  <h2>Proyectos</h2>
+  <div class="proyectos-header">
+    <h2 data-i18n="proyectos-titulo">Proyectos</h2>
+    <a href="#galeria" class="gallery-link" data-i18n="galeria-link">Ver mis fotos artísticas →</a>
+  </div>
   <br>
 
   <div class="project-card">
     <div class="top">
-      <h3>Suliit</h3>
-      <span class="role">Communication Lead · Product design</span>
+      <h3>Skyjob</h3>
+      <span class="role" data-i18n="p-skyjob-rol">Trabajo de Fin de Grado · Producto digital</span>
     </div>
-    <p>Proyecto creado para demostrar que un cambio significativo puede empezar con pequeñas acciones: botellas reutilizables de acero inoxidable, con diseños predefinidos y opción de personalización total.</p>
+    <p data-i18n="p-skyjob-desc">Plataforma digital de comparación de empleo pensada para jóvenes sin experiencia previa, con una campaña de anuncios SEM y una estrategia de marketing propia para darle visibilidad al proyecto.</p>
     <div class="skills">
-      <span class="skill-tag">Gestión de clientes y proveedores</span>
-      <span class="skill-tag">Diseño de producto</span>
-      <span class="skill-tag">Creatividad</span>
+      <span class="skill-tag" data-i18n="p-skyjob-skill1">Estrategia SEM</span>
+      <span class="skill-tag" data-i18n="p-skyjob-skill2">Marketing digital</span>
+      <span class="skill-tag" data-i18n="p-skyjob-skill3">Diseño de producto</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="top">
+      <h3>Suliit</h3>
+      <span class="role" data-i18n="p-suliit-rol">Communication Lead · Product design</span>
+    </div>
+    <p data-i18n="p-suliit-desc">Proyecto creado para demostrar que un cambio significativo puede empezar con pequeñas acciones: botellas reutilizables de acero inoxidable, con diseños predefinidos y opción de personalización total.</p>
+    <div class="skills">
+      <span class="skill-tag" data-i18n="p-suliit-skill1">Gestión de clientes y proveedores</span>
+      <span class="skill-tag" data-i18n="p-suliit-skill2">Diseño de producto</span>
+      <span class="skill-tag" data-i18n="p-suliit-skill3">Creatividad</span>
     </div>
   </div>
 
   <div class="project-card">
     <div class="top">
       <h3>Velti</h3>
-      <span class="role">Project &amp; Financial Lead · Product design</span>
+      <span class="role" data-i18n="p-velti-rol">Project &amp; Financial Lead · Product design</span>
     </div>
-    <p>Proyecto para promover el #buylessbuywell: pañuelos versátiles diseñados para poder llevarse de 1.000 formas distintas, como alternativa al consumo masivo.</p>
+    <p data-i18n="p-velti-desc">Proyecto para promover el #buylessbuywell: pañuelos versátiles diseñados para poder llevarse de 1.000 formas distintas, como alternativa al consumo masivo.</p>
     <div class="skills">
-      <span class="skill-tag">Gestión financiera</span>
-      <span class="skill-tag">Diseño de producto</span>
+      <span class="skill-tag" data-i18n="p-velti-skill1">Gestión financiera</span>
+      <span class="skill-tag" data-i18n="p-velti-skill2">Diseño de producto</span>
     </div>
   </div>
 
   <div class="project-card">
     <div class="top">
       <h3>nativES</h3>
-      <span class="role">Project Lead · Servicio educativo</span>
+      <span class="role" data-i18n="p-natives-rol">Project Lead · Servicio educativo</span>
     </div>
-    <p>Servicio para poner en práctica lo aprendido en idiomas a través de competiciones, juegos y conversaciones con hablantes nativos, frente al problema global de no practicar lo estudiado.</p>
+    <p data-i18n="p-natives-desc">Servicio para poner en práctica lo aprendido en idiomas a través de competiciones, juegos y conversaciones con hablantes nativos, frente al problema global de no practicar lo estudiado.</p>
     <div class="skills">
-      <span class="skill-tag">Diseño de experiencia de usuario</span>
-      <span class="skill-tag">Comunicación</span>
+      <span class="skill-tag" data-i18n="p-natives-skill1">Diseño de experiencia de usuario</span>
+      <span class="skill-tag" data-i18n="p-natives-skill2">Comunicación</span>
     </div>
   </div>
 
   <div class="project-card">
     <div class="top">
       <h3>Tekirola</h3>
-      <span class="role">Proyecto colaborativo · Transformación digital</span>
+      <span class="role" data-i18n="p-tekirola-rol">Proyecto colaborativo · Transformación digital</span>
     </div>
-    <p>Estudios y soluciones digitales personalizadas para organizaciones deportivas, con el objetivo de identificar necesidades y diseñar estrategias de transformación digital para el sector.</p>
+    <p data-i18n="p-tekirola-desc">Estudios y soluciones digitales personalizadas para organizaciones deportivas, con el objetivo de identificar necesidades y diseñar estrategias de transformación digital para el sector.</p>
     <div class="skills">
-      <span class="skill-tag">Estudios de digitalización</span>
+      <span class="skill-tag" data-i18n="p-tekirola-skill1">Estudios de digitalización</span>
       <span class="skill-tag">UX</span>
     </div>
   </div>
@@ -306,11 +172,11 @@
   <div class="project-card">
     <div class="top">
       <h3>Ikusmin</h3>
-      <span class="role">Communication Lead · Servicio cultural</span>
+      <span class="role" data-i18n="p-ikusmin-rol">Communication Lead · Servicio cultural</span>
     </div>
-    <p>Proyecto para promover la lectura y escritura en euskera entre jóvenes, incorporando nuevas tecnologías al proceso creativo. Impacto: 16 jóvenes participantes.</p>
+    <p data-i18n="p-ikusmin-desc">Proyecto para promover la lectura y escritura en euskera entre jóvenes, incorporando nuevas tecnologías al proceso creativo. Impacto: 16 jóvenes participantes.</p>
     <div class="skills">
-      <span class="skill-tag">Facilitación de sesiones</span>
+      <span class="skill-tag" data-i18n="p-ikusmin-skill1">Facilitación de sesiones</span>
       <span class="skill-tag">Design thinking</span>
     </div>
   </div>
@@ -318,23 +184,36 @@
   <div class="project-card">
     <div class="top">
       <h3>Konekta-Tu</h3>
-      <span class="role">Financial Lead · Servicio tecnológico</span>
+      <span class="role" data-i18n="p-konekta-rol">Financial Lead · Servicio tecnológico</span>
     </div>
-    <p>Proyecto para cerrar la brecha digital generacional: talleres digitales presenciales para personas mayores, impartidos por jóvenes de la Generación Z. Impacto: ~200 personas entre sus dos ediciones.</p>
+    <p data-i18n="p-konekta-desc">Proyecto para cerrar la brecha digital generacional: talleres digitales presenciales para personas mayores, impartidos por jóvenes de la Generación Z. Impacto: ~200 personas entre sus dos ediciones.</p>
     <div class="skills">
-      <span class="skill-tag">Facilitación con adultos mayores</span>
-      <span class="skill-tag">Prototipado</span>
+      <span class="skill-tag" data-i18n="p-konekta-skill1">Facilitación con adultos mayores</span>
+      <span class="skill-tag" data-i18n="p-konekta-skill2">Prototipado</span>
     </div>
   </div>
 </section>
 
+<!-- GALERIA -->
+<section id="galeria">
+  <h2 data-i18n="galeria-titulo">Galería</h2>
+  <p style="color: var(--muted); margin: 10px 0 40px;" data-i18n="galeria-desc">Una selección de mis fotos artísticas.</p>
+  <div class="carousel" id="carousel">
+    <button class="carousel-btn prev" onclick="moverCarrusel(-1)">‹</button>
+    <button class="carousel-btn next" onclick="moverCarrusel(1)">›</button>
+  </div>
+  <div class="carousel-counter"><span id="counter-current">1</span> / <span id="counter-total"></span></div>
+</section>
+
 <!-- CONTACTO -->
 <footer id="contacto">
-  <h2>Contacto</h2>
-  <p class="contact-line">Oñati, Gipuzkoa (España)</p>
+  <h2 data-i18n="contacto-titulo">Contacto</h2>
+  <p class="contact-line" data-i18n="contacto-direccion">Oñati, Gipuzkoa (España)</p>
   <p class="contact-line"><a href="mailto:mariamurgiondoleturiaga@gmail.com">mariamurgiondoleturiaga@gmail.com</a></p>
   <p class="contact-line">(+34) 634 444 509</p>
 </footer>
 
+<script src="script.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
