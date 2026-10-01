@@ -1,5 +1,5 @@
 :root {
-    --navy: #1a3168;
+    --navy: #4c5e3c;
     --lime: #a8d94a;
     --bg: #f8f7f4;
     --text: #2b2b2b;
@@ -13,10 +13,10 @@
     line-height: 1.7;
   }
   h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.08em;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.01em;
     color: var(--navy);
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 600;
   }
   a { color: var(--navy); }
@@ -138,37 +138,123 @@
   .lang-item span:last-child { color: var(--lime); font-weight: 600; }
 
   /* PROJECTS */
-  .project-card {
-    border: 1px solid var(--navy);
-    border-radius: 2px;
-    padding: 32px;
-    margin-bottom: 28px;
-  }
-  .project-card .top {
+  #proyectos { max-width: 100%; padding-left: 0; padding-right: 0; }
+  .proyectos-intro {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 0 clamp(24px, 8vw, 90px);
+    margin-bottom: 34px;
   }
-  .project-card h3 { font-size: 1.6rem; }
-  .project-card .role { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
-  .project-card .skills { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill-tag {
-    background: #eef3d6;
-    color: #4c661c;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.78rem;
+  .proyectos-subtitle {
+    font-family: 'Poppins';
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
   }
 
-  .proyectos-header {
+  .proyectos-track {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 22px;
+    overflow-x: auto;
+    padding: 6px clamp(24px, 8vw, 90px) 28px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
+
+  .tile {
+    flex: 0 0 300px;
+    min-height: 440px;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(76,94,60,0.18);
+  }
+  .tile-eyebrow {
+    font-family: 'Poppins';
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 14px;
+  }
+  .tile-title {
+    font-size: 1.9rem;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    color: inherit;
+  }
+  .tile-desc {
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    line-height: 1.55;
+    opacity: 0.92;
+    flex: 1;
+  }
+  .tile-skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .tile-skills span {
+    font-family: 'Poppins';
+    font-size: 0.72rem;
+    padding: 4px 11px;
+    border-radius: 20px;
+  }
+
+  /* Paleta de colores de las tiles */
+  .tile.c1 { background: var(--navy); color: #fff; }
+  .tile.c1 .tile-skills span { background: rgba(255,255,255,0.16); }
+  .tile.c2 { background: linear-gradient(135deg, var(--lime) 0%, #e4e6cf 100%); color: var(--navy); }
+  .tile.c2 .tile-skills span { background: rgba(76,94,60,0.12); }
+  .tile.c3 { background: #efe9db; color: #2b2b2b; }
+  .tile.c3 .tile-skills span { background: rgba(76,94,60,0.08); color: #4c5e3c; }
+  .tile.c4 { background: #d8704a; color: #fff; }
+  .tile.c4 .tile-skills span { background: rgba(255,255,255,0.18); }
+
+  /* Tile de Figma: enlaza fuera */
+  .tile-figma {
+    background: var(--navy);
+    color: #fff;
+    cursor: pointer;
+  }
+  .tile-link {
+    margin-top: auto;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Tile con foto de fondo (Instagram) */
+  .tile-image {
+    padding: 0;
+    background-size: cover;
+    background-position: center top;
+    align-items: stretch;
+    justify-content: flex-end;
+    overflow: hidden;
+    color: #fff;
+  }
+  .tile-scrim {
+    width: 100%;
+    padding: 26px 28px 28px;
+    background: linear-gradient(to top, rgba(10,10,10,0.82), rgba(10,10,10,0) 75%);
+    border-radius: 0 0 24px 24px;
+  }
+  .tile-image .tile-eyebrow,
+  .tile-image .tile-title,
+  .tile-image .tile-desc { color: #fff; }
+  .tile-image .tile-desc { font-size: 0.82rem; opacity: 0.9; flex: none; }
+
   .gallery-link {
     text-decoration: none;
     font-family: 'Poppins';
@@ -206,7 +292,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(26,49,104,0.65);
+    background: rgba(76,94,60,0.65);
     color: #fff;
     border: none;
     width: 40px;
@@ -263,15 +349,30 @@
     .hero h1 { font-size: 2.6rem; }
     .grid-2 { grid-template-columns: 1fr; gap: 32px; }
     .exp-item .meta { flex-direction: column; align-items: flex-start; gap: 2px; }
-    .project-card { padding: 22px; }
-    .project-card .top { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .tile { flex-basis: 250px; min-height: 380px; padding: 24px; border-radius: 18px; }
+    .tile-title { font-size: 1.5rem; }
+    .proyectos-track { padding-right: 22px; }
+    .proyectos-intro { padding: 0 22px; }
     footer { padding: 50px 24px; }
     .carousel { height: 42vh; max-height: 380px; }
     .carousel-btn { width: 32px; height: 32px; font-size: 0.95rem; }
-    .proyectos-header { flex-direction: column; align-items: flex-start; }
   }
 
   @media (max-width: 420px) {
     .hero h1 { font-size: 2.1rem; }
     #sobre-mi p { font-size: 0.95rem; }
+  }
+
+  /* ANIMACIÓN DE APARICIÓN AL HACER SCROLL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
   }

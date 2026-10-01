@@ -60,8 +60,24 @@ const traducciones = {
   "proyectos-titulo": { es: "Proyectos", en: "Projects" },
   "galeria-link": { es: "Ver mis fotos artísticas →", en: "See my artistic photos →" },
 
-  "p-skyjob-rol": { es: "Trabajo de Fin de Grado · Producto digital", en: "Final Degree Project · Digital product" },
-  "p-skyjob-desc": {
+  "p-scaleupfigma-rol": { es: "Diseño UX/UI · Figma", en: "UX/UI Design · Figma" },
+  "p-scaleupfigma-desc": {
+    es: "Diseño de la nueva web de ScaleUp Porto en Figma: navegación responsive, sección de eventos y noticias con tarjetas dinámicas, y aplicación de la nueva identidad visual de marca que ayudé a definir.",
+    en: "Design of ScaleUp Porto's new website in Figma: responsive navigation, an events and news section with dynamic cards, and the new brand visual identity I helped define."
+  },
+  "p-scaleupfigma-skill1": { es: "UX/UI Design", en: "UX/UI Design" },
+  "p-scaleupfigma-skill2": { es: "Diseño responsive", en: "Responsive design" },
+  "p-scaleupfigma-skill3": { es: "Identidad visual", en: "Visual identity" },
+
+  "p-scaleupig-rol": { es: "Social Media · Monitorización y contenido", en: "Social Media · Monitoring and content" },
+  "p-scaleupig-desc": {
+    es: "Seguimiento del Instagram de ScaleUp Porto, aportando ideas de contenido y colaborando en las creaciones visuales publicadas en el canal.",
+    en: "Monitoring of ScaleUp Porto's Instagram, contributing content ideas and collaborating on the visual creations published on the channel."
+  },
+  "p-scaleupig-skill1": { es: "Social media", en: "Social media" },
+  "p-scaleupig-skill2": { es: "Ideación de contenido", en: "Content ideation" },
+
+  "p-skyjob-rol": { es: "Trabajo de Fin de Grado · Producto digital", en: "Final Degree Project · Digital product" },  "p-skyjob-desc": {
     es: "Plataforma digital de comparación de empleo pensada para jóvenes sin experiencia previa, con una campaña de anuncios SEM y una estrategia de marketing propia para darle visibilidad al proyecto.",
     en: "Digital job-comparison platform designed for young people with no prior experience, with an SEM ad campaign and a dedicated marketing strategy to give the project visibility."
   },

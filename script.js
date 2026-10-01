@@ -1,4 +1,4 @@
-// Cambia este número si añades o quitas fotos de img/galeria/
+// Cambiar este número si añades o quitas fotos de img/galeria/
   const TOTAL_FOTOS = 47;
 
   const carousel = document.getElementById('carousel');
