@@ -161,6 +161,7 @@
     overflow-x: auto;
     padding: 6px clamp(24px, 8vw, 90px) 28px;
     scroll-snap-type: x proximity;
+    scroll-padding: 0 clamp(24px, 8vw, 90px);
     -webkit-overflow-scrolling: touch;
   }
 
@@ -325,7 +326,7 @@
   }
   footer h2 { color: #fff; margin-bottom: 20px; }
   footer a { color: var(--lime); text-decoration: none; }
-  footer .contact-line { margin: 6px 0; color: #d7dcec; }
+  footer .contact-line { margin: 6px 0; color: #d7dcec; overflow-wrap: anywhere; }
 
   /* TABLET */
   @media (max-width: 1024px) {
@@ -338,13 +339,13 @@
   /* MOBILE */
   @media (max-width: 700px) {
     nav {
-      gap: 14px;
-      padding: 14px 12px;
-      justify-content: flex-start;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      padding: 10px 12px;
+      justify-content: center;
+      overflow-x: visible;
     }
-    nav a { font-size: 0.75rem; white-space: nowrap; }
+    nav a { font-size: 0.7rem; letter-spacing: 0.08em; white-space: nowrap; }
     section { padding: 50px 22px; }
     .hero { padding: 30px 24px; min-height: 100vh; background-position: 85% center; }
     .hero h1 { font-size: 2.6rem; }
@@ -362,6 +363,11 @@
   @media (max-width: 420px) {
     .hero h1 { font-size: 2.1rem; }
     #sobre-mi p { font-size: 0.95rem; }
+  }
+
+  /* PANTALLAS EN VERTICAL: el nombre va arriba para no tapar la cara */
+  @media (max-aspect-ratio: 1/1) {
+    .hero { justify-content: flex-start; padding-top: 56px; }
   }
 
   /* ANIMACIÓN DE APARICIÓN AL HACER SCROLL */

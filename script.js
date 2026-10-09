@@ -28,7 +28,7 @@
     img.dataset.cargada = 'true';
     const intentar = () => {
       const ext = EXTENSIONES[Number(img.dataset.ext)];
-      img.src = `img/galeria/foto${img.dataset.num}.${ext}`;
+      img.src = `img/Galeria/foto${img.dataset.num}.${ext}`;
     };
     img.onerror = () => {
       const siguiente = Number(img.dataset.ext) + 1;
