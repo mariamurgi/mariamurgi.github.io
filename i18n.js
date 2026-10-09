@@ -15,8 +15,8 @@ const traducciones = {
     en: "Communication and marketing professional with experience in content creation, campaign coordination and external vendor management within a municipal entrepreneurship division, along with SEO and SEM knowledge applied to a personal project and my final degree project."
   },
   "sobre-p2": {
-    es: "He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto, desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.",
-    en: "I have led cross-functional initiatives, managed digital content toolkits, and coordinated innovation events for the Porto City Council, developing strong skills in stakeholder management, planning, and execution."
+    es: "He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto. También he creado la nueva página web de ScaleUp Porto, pensando sus nuevas funcionalidades, su formato y su diseño, y desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.",
+    en: "I have led cross-functional initiatives, managed digital content toolkits, and coordinated innovation events for the Porto City Council. I also created the new ScaleUp Porto website, designing its new features, format and design, and developing strong skills in stakeholder management, planning, and execution."
   },
   "sobre-p3": {
     es: "Bilingüe en euskera y español, con inglés avanzado (C1) y alta capacidad de adaptación. Actualmente combinando mi perfil de comunicación con conocimientos técnicos del Máster en Desarrollo Full Stack (Angular, Node.js).",
@@ -29,6 +29,7 @@ const traducciones = {
     es: "Junior Project Manager — Comunicación y Marketing · División de Emprendimiento, Ayuntamiento de Oporto",
     en: "Junior Project Manager — Communication and Marketing · Entrepreneurship Division, Porto City Council"
   },
+  "exp1-li0": { es: "Creación de una nueva página web para ScaleUp Porto, definiendo las nuevas funcionalidades, el formato y el diseño.", en: "Creation of a new website for ScaleUp Porto, defining its new features, format and design." },
   "exp1-li1": { es: "Generación y redacción de contenidos para newsletter, blog y presentaciones institucionales.", en: "Content creation and writing for newsletters, blog posts, and institutional presentations." },
   "exp1-li2": { es: "Coordinación con agencias externas en la revisión y ajuste de contenidos e identidad visual.", en: "Coordination with external agencies on content review and visual identity adjustments." },
   "exp1-li3": { es: "Diseño e impulso de una estrategia de marca (imagen, propuesta de valor, mensajes) por iniciativa propia.", en: "Design and rollout of a brand strategy (image, value proposition, messaging) on my own initiative." },
@@ -58,12 +59,15 @@ const traducciones = {
   "lang-pt-nivel": { es: "Básico", en: "Basic" },
 
   "proyectos-titulo": { es: "Proyectos", en: "Projects" },
+  "proyectos-subtitulo": { es: "Desliza para descubrirlos todos →", en: "Scroll to discover them all →" },
+  "tile-figma-link": { es: "Ver diseño en Figma →", en: "View design on Figma →" },
   "galeria-link": { es: "Ver mis fotos artísticas →", en: "See my artistic photos →" },
 
-  "p-scaleupfigma-rol": { es: "Diseño UX/UI · Figma", en: "UX/UI Design · Figma" },
+  "p-scaleupfigma-rol": { es: "Nueva web · Funcionalidades, formato y diseño", en: "New website · Features, format and design" },
+  "tile-scaleupfigma-titulo": { es: "ScaleUp Porto<br>Nueva web", en: "ScaleUp Porto<br>New website" },
   "p-scaleupfigma-desc": {
-    es: "Diseño de la nueva web de ScaleUp Porto en Figma: navegación responsive, sección de eventos y noticias con tarjetas dinámicas, y aplicación de la nueva identidad visual de marca que ayudé a definir.",
-    en: "Design of ScaleUp Porto's new website in Figma: responsive navigation, an events and news section with dynamic cards, and the new brand visual identity I helped define."
+    es: "Creación de la nueva web de ScaleUp Porto: planteamiento de las nuevas funcionalidades, del formato y del diseño en Figma, con navegación responsive, sección de eventos y noticias, y aplicación de la nueva identidad visual de marca.",
+    en: "Creation of ScaleUp Porto's new website: planning its new features, format and design in Figma, with responsive navigation, an events and news section, and the new brand visual identity."
   },
   "p-scaleupfigma-skill1": { es: "UX/UI Design", en: "UX/UI Design" },
   "p-scaleupfigma-skill2": { es: "Diseño responsive", en: "Responsive design" },
@@ -77,7 +81,8 @@ const traducciones = {
   "p-scaleupig-skill1": { es: "Social media", en: "Social media" },
   "p-scaleupig-skill2": { es: "Ideación de contenido", en: "Content ideation" },
 
-  "p-skyjob-rol": { es: "Trabajo de Fin de Grado · Producto digital", en: "Final Degree Project · Digital product" },  "p-skyjob-desc": {
+  "p-skyjob-rol": { es: "Trabajo de Fin de Grado · Producto digital", en: "Final Degree Project · Digital product" },
+  "p-skyjob-desc": {
     es: "Plataforma digital de comparación de empleo pensada para jóvenes sin experiencia previa, con una campaña de anuncios SEM y una estrategia de marketing propia para darle visibilidad al proyecto.",
     en: "Digital job-comparison platform designed for young people with no prior experience, with an SEM ad campaign and a dedicated marketing strategy to give the project visibility."
   },
