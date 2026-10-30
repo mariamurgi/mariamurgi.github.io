@@ -1,4 +1,4 @@
-// Cambiar este número si se añaden o quitan fotos de img/galeria/
+// Cambia este número si añades o quitas fotos de img/galeria/
   const TOTAL_FOTOS = 47;
 
   // GitHub Pages distingue mayúsculas de minúsculas (foto1.JPG ≠ foto1.jpg),
@@ -10,7 +10,7 @@
     const img = document.createElement('img');
     img.alt = `Foto artística ${i}`;
     img.dataset.num = i;
-    img.dataset.ext = 0; 
+    img.dataset.ext = 0; // índice de la extensión que se está probando
     carousel.appendChild(img);
   }
 
@@ -28,7 +28,7 @@
     img.dataset.cargada = 'true';
     const intentar = () => {
       const ext = EXTENSIONES[Number(img.dataset.ext)];
-      img.src = `img/Galeria/foto${img.dataset.num}.${ext}`;
+      img.src = `img/galeria/foto${img.dataset.num}.${ext}`;
     };
     img.onerror = () => {
       const siguiente = Number(img.dataset.ext) + 1;
@@ -36,7 +36,7 @@
         img.dataset.ext = siguiente;
         intentar();
       } else {
-        img.dataset.fallida = 'true'; 
+        img.dataset.fallida = 'true'; // no se encontró con ninguna extensión
       }
     };
     intentar();
@@ -60,4 +60,69 @@
   }
 
   actualizarCarrusel();
-  setInterval(() => moverCarrusel(1), 5000);
+
+  // Pase automático: se pausa si el ratón está encima o la vista ampliada está abierta
+  let pausado = false;
+  setInterval(() => { if (!pausado) moverCarrusel(1); }, 5000);
+  carousel.addEventListener('mouseenter', () => pausado = true);
+  carousel.addEventListener('mouseleave', () => pausado = false);
+
+  // ---------- Vista ampliada (lightbox) ----------
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCounter = document.getElementById('lb-counter');
+
+  function mostrarLightbox() {
+    const img = carouselImgs[current];
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lbCounter.textContent = `${current + 1} / ${carouselImgs.length}`;
+  }
+  function abrirLightbox() {
+    mostrarLightbox();
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lb-open');
+    pausado = true;
+  }
+  function cerrarLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lb-open');
+    pausado = false;
+  }
+  function moverLightbox(dir) { moverCarrusel(dir); mostrarLightbox(); }
+
+  // clic en la foto (no en las flechas) abre la vista ampliada
+  carousel.addEventListener('click', e => {
+    if (e.target.closest('.carousel-btn')) return;
+    if (carouselImgs[current].dataset.fallida) return;
+    abrirLightbox();
+  });
+  document.getElementById('lb-close').addEventListener('click', cerrarLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => moverLightbox(-1));
+  document.getElementById('lb-next').addEventListener('click', () => moverLightbox(1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) cerrarLightbox(); });
+
+  // Teclado: ← → para cambiar, Esc para cerrar
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') cerrarLightbox();
+    if (e.key === 'ArrowLeft') moverLightbox(-1);
+    if (e.key === 'ArrowRight') moverLightbox(1);
+  });
+
+  // Gestos táctiles: deslizar el dedo a izquierda/derecha cambia de foto
+  function swipe(el, alDeslizar) {
+    let x0 = null, y0 = null;
+    el.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    el.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      const dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) alDeslizar(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+  swipe(carousel, dir => moverCarrusel(dir));
+  swipe(lightbox, dir => moverLightbox(dir));

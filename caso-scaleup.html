@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nueva web de ScaleUp Porto — Caso de estudio · Maria Murgiondo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="caso">
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html#proyectos" data-i18n="caso-back">← Volver al portfolio</a>
+  <button id="lang-toggle" class="lang-toggle" onclick="cambiarIdioma()">EN</button>
+</nav>
+
+<header class="caso-hero">
+  <p class="tile-eyebrow" data-i18n="caso-eyebrow">Caso de estudio · UX/UI y gestión de proyecto</p>
+  <h1 data-i18n="caso-titulo">Nueva web de ScaleUp Porto</h1>
+  <p class="caso-lead" data-i18n="caso-lead">De las necesidades del ecosistema a un diseño listo para construir: analicé qué necesitaba la web, definí sus funcionalidades, propuse la tecnología y diseñé la interfaz.</p>
+  <div class="caso-meta"><div><span class="m-t" data-i18n="caso-m1-t">Rol</span><strong data-i18n="caso-m1-v">Junior Project Manager · análisis, requisitos y diseño UX/UI</strong></div><div><span class="m-t" data-i18n="caso-m2-t">Cliente</span><strong data-i18n="caso-m2-v">ScaleUp Porto · Ayuntamiento de Oporto</strong></div><div><span class="m-t" data-i18n="caso-m3-t">Herramientas</span><strong data-i18n="caso-m3-v">v0 · Figma · documentación de requisitos</strong></div><div><span class="m-t" data-i18n="caso-m4-t">Año</span><strong data-i18n="caso-m4-v">2026</strong></div></div>
+</header>
+
+<section>
+  <h2 data-i18n="caso-ctx-t">Contexto</h2>
+  <p data-i18n="caso-ctx-p">ScaleUp Porto es la iniciativa de la división de emprendimiento del Ayuntamiento de Oporto que apoya el ecosistema de startups y scaleups de la ciudad. Necesitaba una web nueva que sirviera de referencia oficial para fundadores, inversores, enablers y público internacional.</p>
+</section>
+
+<section>
+  <h2 data-i18n="caso-ret-t">El reto</h2>
+  <p data-i18n="caso-ret-p">La información del ecosistema estaba fragmentada y la web debía funcionar como plataforma, no como una web corporativa. Además tenía que ser fácil de entender, crecer con el tiempo sin rediseñarse y permitir que el equipo de comunicación la actualizase sin depender de desarrolladores.</p>
+</section>
+
+<section>
+  <h2 data-i18n="caso-pro-t">Proceso</h2>
+  <ol class="steps">
+      <li class="step"><span class="step-n">01</span><div><h3 data-i18n="caso-s1-t">Análisis de necesidades</h3><p data-i18n="caso-s1-p">Estudié qué necesitaba cada audiencia y comparé los tipos de CMS (tradicionales, headless, en la nube y generadores estáticos), con sus ventajas y límites para un contexto institucional.</p></div></li>
+      <li class="step"><span class="step-n">02</span><div><h3 data-i18n="caso-s2-t">Requisitos de la web</h3><p data-i18n="caso-s2-p">Definí los objetivos y las funcionalidades clave: menú fijo con mega-menús, navegación por etapas para fundadores, toolkit modular para inversores, mapa del ecosistema, y secciones de eventos, noticias y enablers gestionadas desde el CMS. Con una home ligera que actúa de puerta de entrada.</p></div></li>
+      <li class="step"><span class="step-n">03</span><div><h3 data-i18n="caso-s3-t">Propuesta tecnológica</h3><p data-i18n="caso-s3-p">Propuse una arquitectura desacoplada: un CMS headless para gestionar el contenido y un frontend ligero, alojados en infraestructura institucional. Comparé opciones (WordPress, Strapi, Directus) con criterios claros: control, mantenimiento, velocidad, seguridad y autonomía del equipo.</p></div></li>
+      <li class="step"><span class="step-n">04</span><div><h3 data-i18n="caso-s4-t">Primer prototipo en v0</h3><p data-i18n="caso-s4-p">Para validar la dirección rápido, generé un primer diseño de la home con v0 y lo usé para alinear al equipo antes de invertir tiempo en el diseño final.</p></div></li>
+      <li class="step"><span class="step-n">05</span><div><h3 data-i18n="caso-s5-t">Diseño final en Figma</h3><p data-i18n="caso-s5-p">Llevé el diseño a Figma aplicando la nueva identidad visual de marca, con navegación responsive y tarjetas dinámicas para eventos y noticias.</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2 data-i18n="caso-dis-t">De la idea al diseño final</h2>
+  <p data-i18n="caso-dis-p">La primera versión seguía el criterio de requisitos (azul como base y naranja para las acciones). En Figma el diseño pasó a la identidad propia de ScaleUp Porto: rojo y negro, con una imagen de la ciudad en la cabecera, más cercano a la marca.</p>
+  <div class="caso-imgs">
+    <figure><img src="img/casos/scaleup-v0.webp" alt="Primer prototipo de la home de ScaleUp Porto en v0" loading="lazy"><figcaption data-i18n="caso-img1">Primer prototipo (v0)</figcaption></figure>
+    <figure><img src="img/casos/scaleup-figma.webp" alt="Diseño final de la home de ScaleUp Porto en Figma" loading="lazy"><figcaption data-i18n="caso-img2">Diseño final (Figma)</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2 data-i18n="caso-ad-t">Antes y después</h2>
+  <p data-i18n="caso-ad-p">A la izquierda, la web de ScaleUp Porto antes del cambio. A la derecha, el diseño que propuse. Recorre cualquiera de los dos marcos y el otro se mueve a la vez.</p>
+  <div class="ba">
+    <figure class="ba-col">
+      <figcaption data-i18n="caso-ad-antes">Antes · web actual</figcaption>
+      <div class="ba-win" id="ba-antes" tabindex="0"><img src="img/casos/scaleup-antes.webp" alt="Página de inicio de la web actual de ScaleUp Porto" loading="lazy"></div>
+    </figure>
+    <figure class="ba-col">
+      <figcaption data-i18n="caso-ad-despues">Después · mi propuesta</figcaption>
+      <div class="ba-win" id="ba-despues" tabindex="0"><img src="img/casos/scaleup-despues.webp" alt="Diseño propuesto para la nueva web de ScaleUp Porto" loading="lazy"></div>
+    </figure>
+  </div>
+  <p class="ba-note"><span data-i18n="caso-ad-hint">Desliza dentro del marco</span> · <span data-i18n="caso-ad-nota">El diseño usa contenido de ejemplo.</span></p>
+  <h3 class="ch-title" data-i18n="caso-ch-t">Lo que cambia</h3>
+  <ul class="aprendizajes">
+    <li data-i18n="caso-ch1">Un mensaje claro desde el primer momento: la cabecera explica qué es ScaleUp Porto y ofrece dos caminos, explorar el ecosistema o ir a fundadores.</li>
+    <li data-i18n="caso-ch2">Navegación por audiencias (fundadores, inversores y enablers) en lugar de un menú de secciones sueltas.</li>
+    <li data-i18n="caso-ch3">Eventos y noticias reunidos en un solo bloque, con etiqueta, fecha, hora y lugar a primera vista.</li>
+    <li data-i18n="caso-ch4">Cifras clave y mapa del ecosistema integrados en la home, en vez de estar solo en un enlace externo.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 data-i18n="caso-apr-t">Qué aprendí</h2>
+  <ul class="aprendizajes">
+    <li data-i18n="caso-a1">A convertir necesidades de negocio en requisitos claros y decisiones técnicas.</li>
+    <li data-i18n="caso-a2">A explicar opciones tecnológicas a perfiles no técnicos con comparativas sencillas.</li>
+    <li data-i18n="caso-a3">A iterar rápido: prototipo para validar y diseño final para pulir.</li>
+  </ul>
+  <div class="caso-btns">
+    <a class="btn" href="https://www.figma.com/site/tAZlT5QmeBNQ3S9ER1Mbrz/ScaleUp-Porto?node-id=0-1&t=EKURttYvCMZg6w74-1" target="_blank" rel="noopener" data-i18n="caso-btn-figma">Ver el diseño en Figma →</a>
+    <a class="btn btn-ghost" href="https://v0-homepage-design-39ohax6m3.vercel.app/" target="_blank" rel="noopener" data-i18n="caso-btn-v0">Ver el primer prototipo →</a>
+  </div>
+</section>
+
+<footer id="contacto">
+  <h2 data-i18n="contacto-titulo">Contacto</h2>
+  <p class="contact-line"><a href="mailto:mariamurgiondoleturiaga@gmail.com">mariamurgiondoleturiaga@gmail.com</a></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>

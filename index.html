@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
 <nav>
   <a href="#sobre-mi" data-i18n="nav-sobre">Sobre mí</a>
   <a href="#experiencia" data-i18n="nav-experiencia">Experiencia</a>
@@ -22,23 +24,57 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-  <h1>Maria<br>Murgiondo<br>Leturiaga</h1>
-  <p data-i18n="hero-tag">Comunicación &amp; Marketing · Portfolio</p>
+  <div class="hero-bg" data-speed="-0.22"></div>
+  <span class="frame hero-frame hf-1" data-speed="0.10" aria-hidden="true"></span>
+  <span class="frame hero-frame hf-2" data-speed="-0.07" aria-hidden="true"></span>
+  <h1 class="hero-title"><span class="w" style="--i:0">Maria</span><span class="w" style="--i:1">Murgiondo</span><span class="w" style="--i:2">Leturiaga</span></h1>
+  <p class="hero-tag" data-i18n="hero-tag">Junior Project Manager · Comunicación &amp; Digital</p>
+  <a href="#sobre-mi" class="scroll-hint" aria-label="Scroll"><span data-i18n="hero-scroll">Desliza</span><i></i></a>
 </section>
+
+<!-- CINTA DE HABILIDADES -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track">
+    <span data-i18n="mq-1">Gestión de proyectos</span><b>✦</b>
+    <span data-i18n="mq-2">Comunicación y contenidos</span><b>✦</b>
+    <span data-i18n="mq-3">Gestión de stakeholders</span><b>✦</b>
+    <span data-i18n="mq-4">Coordinación de proveedores</span><b>✦</b>
+    <span>SEO</span><b>✦</b>
+    <span>SEM</span><b>✦</b>
+    <span>Figma</span><b>✦</b>
+    <span>Angular</span><b>✦</b>
+    <span>Node.js</span><b>✦</b>
+    <span>Canva</span><b>✦</b>
+  </div>
+</div>
 
 <!-- SOBRE MI -->
 <section id="sobre-mi">
   <h2 data-i18n="sobre-titulo">¿Quién soy?</h2>
-  <br>
-  <p data-i18n="sobre-p1">Profesional de comunicación y marketing con experiencia en generación de contenidos, coordinación de campañas y gestión de proveedores externos en una división de emprendimiento municipal, además de conocimientos de SEO y SEM aplicados en un proyecto propio y en mi Trabajo de Fin de Grado.</p>
-  <p data-i18n="sobre-p2">He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto. También he creado la nueva página web de ScaleUp Porto, pensando sus nuevas funcionalidades, su formato y su diseño, y desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.</p>
-  <p data-i18n="sobre-p3">Bilingüe en euskera y español, con inglés avanzado (C1) y alta capacidad de adaptación. Actualmente combinando mi perfil de comunicación con conocimientos técnicos del Máster en Desarrollo Full Stack (Angular, Node.js).</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p data-i18n="sobre-p1">Profesional de comunicación y marketing con experiencia en generación de contenidos, coordinación de campañas y gestión de proveedores externos en una división de emprendimiento municipal, además de conocimientos de SEO y SEM aplicados en un proyecto propio y en mi Trabajo de Fin de Grado.</p>
+      <p data-i18n="sobre-p2">He liderado iniciativas multidisciplinares, gestionado toolkits de contenido digital y coordinado eventos de innovación para el Ayuntamiento de Oporto. También he creado la nueva página web de ScaleUp Porto, pensando sus nuevas funcionalidades, su formato y su diseño, y desarrollando fuertes competencias en gestión de stakeholders, planificación y ejecución.</p>
+      <p data-i18n="sobre-p3">Bilingüe en euskera y español, con inglés avanzado (C1) y alta capacidad de adaptación. Actualmente combinando mi perfil de comunicación con conocimientos técnicos del Máster en Desarrollo Full Stack (Angular, Node.js).</p>
+    </div>
+    <div class="about-photo">
+      <span class="frame af-1" data-speed="0.07" aria-hidden="true"></span>
+      <span class="frame af-2" data-speed="-0.05" aria-hidden="true"></span>
+      <img src="img/retrato.webp" alt="Maria Murgiondo Leturiaga" loading="lazy">
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label" data-i18n="stat-1">empresas reales cofundadas</span></div>
+    <div class="stat"><span class="stat-num" data-count="6">6</span><span class="stat-label" data-i18n="stat-2">proyectos de startups · 2020–2024</span></div>
+    <div class="stat"><span class="stat-num" data-count="4">4</span><span class="stat-label" data-i18n="stat-4">idiomas</span></div>
+  </div>
 </section>
 
 <!-- EXPERIENCIA -->
 <section id="experiencia">
   <h2 data-i18n="experiencia-titulo">Experiencia</h2>
-  <br>
+  <div class="timeline" id="timeline">
   <div class="exp-item">
     <div class="meta">
       <h3>ScaleUp Porto</h3>
@@ -68,12 +104,12 @@
       <li data-i18n="exp2-li4">Liderazgo de la gestión financiera y de clientes en seis proyectos de startups.</li>
     </ul>
   </div>
+  </div>
 </section>
 
 <!-- FORMACION Y LANGUAGES -->
 <section id="formacion">
   <h2 data-i18n="formacion-titulo">Formación &amp; Idiomas</h2>
-  <br>
   <div class="grid-2">
     <div>
       <h3 class="col-title" data-i18n="col-formacion">Formación</h3>
@@ -92,10 +128,10 @@
     </div>
     <div>
       <h3 class="col-title" data-i18n="col-idiomas">Idiomas</h3>
-      <div class="lang-item"><span data-i18n="lang-es">Español</span><span data-i18n="lang-es-nivel">Nativo</span></div>
-      <div class="lang-item"><span data-i18n="lang-eu">Euskera</span><span>C1 · EGA</span></div>
-      <div class="lang-item"><span data-i18n="lang-en">Inglés</span><span>C1</span></div>
-      <div class="lang-item"><span data-i18n="lang-pt">Portugués</span><span data-i18n="lang-pt-nivel">Básico</span></div>
+      <div class="lang-item" style="--lv:100%"><span data-i18n="lang-es">Español</span><span data-i18n="lang-es-nivel">Nativo</span></div>
+      <div class="lang-item" style="--lv:100%"><span data-i18n="lang-eu">Euskera</span><span>C1 · EGA</span></div>
+      <div class="lang-item" style="--lv:100%"><span data-i18n="lang-en">Inglés</span><span>C1</span></div>
+      <div class="lang-item" style="--lv:30%"><span data-i18n="lang-pt">Portugués</span><span data-i18n="lang-pt-nivel">Básico</span></div>
     </div>
   </div>
 </section>
@@ -105,16 +141,22 @@
   <div class="proyectos-intro">
     <h2 data-i18n="proyectos-titulo">Proyectos</h2>
     <p class="proyectos-subtitle" data-i18n="proyectos-subtitulo">Desliza para descubrirlos todos →</p>
-    <a href="#galeria" class="gallery-link" data-i18n="galeria-link">Ver mis fotos artísticas →</a>
+    <div class="intro-row">
+      <a href="#galeria" class="gallery-link" data-i18n="galeria-link">Ver mis fotos artísticas →</a>
+      <div class="track-controls">
+        <button type="button" class="tc" id="tc-prev" aria-label="Anterior / Previous">‹</button>
+        <button type="button" class="tc" id="tc-next" aria-label="Siguiente / Next">›</button>
+      </div>
+    </div>
   </div>
 
   <div class="proyectos-track">
 
-    <a class="tile tile-figma" href="https://www.figma.com/site/tAZlT5QmeBNQ3S9ER1Mbrz/ScaleUp-Porto?node-id=0-1&t=ltd1SNqSa7q2L08L-1" target="_blank" rel="noopener">
+    <a class="tile tile-figma" href="caso-scaleup.html">
       <span class="tile-eyebrow" data-i18n="p-scaleupfigma-rol">Diseño UX/UI · Figma</span>
       <h3 class="tile-title" data-i18n="tile-scaleupfigma-titulo">ScaleUp Porto<br>Nueva web</h3>
       <p class="tile-desc" data-i18n="p-scaleupfigma-desc">Diseño de la nueva web de ScaleUp Porto en Figma: navegación responsive, sección de eventos y noticias con tarjetas dinámicas, y aplicación de la nueva identidad visual de marca que ayudé a definir.</p>
-      <span class="tile-link" data-i18n="tile-figma-link">Ver diseño en Figma →</span>
+      <span class="tile-link" data-i18n="tile-figma-link">Ver caso de estudio →</span>
     </a>
 
     <div class="tile c4">
@@ -137,7 +179,9 @@
       </div>
     </div>
 
-    <div class="tile c2">
+    <div class="tile c2 has-sticker">
+      <img class="sticker st-1" src="img/stickers/botella-negra.webp" alt="" loading="lazy" draggable="false">
+      <img class="sticker st-2" src="img/stickers/botella-roja.webp" alt="" loading="lazy" draggable="false">
       <span class="tile-eyebrow" data-i18n="p-suliit-rol">Communication Lead · Product design</span>
       <h3 class="tile-title">Suliit</h3>
       <p class="tile-desc" data-i18n="p-suliit-desc">Proyecto creado para demostrar que un cambio significativo puede empezar con pequeñas acciones: botellas reutilizables de acero inoxidable, con diseños predefinidos y opción de personalización total.</p>
@@ -147,7 +191,9 @@
       </div>
     </div>
 
-    <div class="tile c3">
+    <div class="tile c3 has-sticker">
+      <img class="sticker st-1" src="img/stickers/panuelo-1.webp" alt="" loading="lazy" draggable="false">
+      <img class="sticker st-2" src="img/stickers/panuelo-2.webp" alt="" loading="lazy" draggable="false">
       <span class="tile-eyebrow" data-i18n="p-velti-rol">Project &amp; Financial Lead · Product design</span>
       <h3 class="tile-title">Velti</h3>
       <p class="tile-desc" data-i18n="p-velti-desc">Proyecto para promover el #buylessbuywell: pañuelos versátiles diseñados para poder llevarse de 1.000 formas distintas, como alternativa al consumo masivo.</p>
@@ -185,6 +231,7 @@
         <span data-i18n="p-ikusmin-skill1">Facilitación de sesiones</span>
         <span>Design thinking</span>
       </div>
+      <a class="tile-link tile-ext" href="https://www.diariovasco.com/alto-deba/onati/proyecto-ikusmin-promueve-lectura-escritura-euskera-jovenes-20240207205713-nt.html" target="_blank" rel="noopener" data-i18n="tile-noticia-link">Leer la noticia →</a>
     </div>
 
     <div class="tile c3">
@@ -195,9 +242,11 @@
         <span data-i18n="p-konekta-skill1">Facilitación con adultos mayores</span>
         <span data-i18n="p-konekta-skill2">Prototipado</span>
       </div>
+      <a class="tile-link tile-ext" href="https://www.nosotroslosmayores.es/2024/01/31/atencion-presencial-y-gratuita-a-personas-mayores-para-solventar-las-dudas-tecnologicas/" target="_blank" rel="noopener" data-i18n="tile-noticia-link">Leer la noticia →</a>
     </div>
 
   </div>
+  <div class="track-progress" aria-hidden="true"><span id="track-bar"></span></div>
 </section>
 
 
@@ -210,7 +259,17 @@
     <button class="carousel-btn next" onclick="moverCarrusel(1)">›</button>
   </div>
   <div class="carousel-counter"><span id="counter-current">1</span> / <span id="counter-total"></span></div>
+  <p class="carousel-hint" data-i18n="galeria-hint">Haz clic en una foto para verla en grande</p>
 </section>
+
+<!-- VISTA AMPLIADA DE LA GALERÍA -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Cerrar / Close">×</button>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Anterior / Previous">‹</button>
+  <img id="lb-img" alt="">
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Siguiente / Next">›</button>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
 
 <!-- CONTACTO -->
 <footer id="contacto">
