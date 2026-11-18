@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyjob — Caso de estudio · Maria Murgiondo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="caso">
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html#proyectos" data-i18n="caso-back">← Volver al portfolio</a>
+  <button id="lang-toggle" class="lang-toggle" onclick="cambiarIdioma()">EN</button>
+</nav>
+
+<header class="caso-hero">
+  <p class="tile-eyebrow" data-i18n="sj-eyebrow">Trabajo de Fin de Grado · Producto digital y validación</p>
+  <h1>Skyjob</h1>
+  <p class="caso-lead" data-i18n="sj-lead">Un comparador de ofertas de empleo para jóvenes sin experiencia. Investigué el problema, publiqué una web real, la probé con anuncios y decidí con datos si seguir o parar.</p>
+  <div class="caso-meta"><div><span class="m-t" data-i18n="sj-m1-t">Rol</span><strong data-i18n="sj-m1-v">Líder de proyecto y líder financiera</strong></div><div><span class="m-t" data-i18n="sj-m2-t">Equipo</span><strong data-i18n="sj-m2-v">Con June (líder de comunicación)</strong></div><div><span class="m-t" data-i18n="sj-m3-t">Herramientas</span><strong data-i18n="sj-m3-v">Web scraping (ZenRows) · anuncios en redes · formularios y correo</strong></div><div><span class="m-t" data-i18n="sj-m4-t">Año</span><strong data-i18n="sj-m4-v">2024</strong></div></div>
+</header>
+
+<section>
+  <div class="stats"><div class="stat"><span class="stat-num" data-count="60">60</span><span class="stat-label" data-i18n="sj-st1">jóvenes y empresas consultados</span></div><div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label" data-i18n="sj-st2">problemáticas contrastadas con datos</span></div><div class="stat"><span class="stat-num" data-count="4">4</span><span class="stat-label" data-i18n="sj-st3">anuncios de prueba para validar el MVP</span></div></div>
+</section>
+
+<section>
+  <h2 data-i18n="sj-prob-t">El problema</h2>
+  <p data-i18n="sj-prob-p">Muchos jóvenes tienen dificultades para encontrar su primer empleo y las empresas no llegan fácilmente a ese talento. El objetivo del proyecto era validar esa problemática, idear una solución y comprobar si funcionaba.</p>
+</section>
+
+<section>
+  <h2 data-i18n="sj-pro-t">Proceso</h2>
+  <ol class="steps">
+      <li class="step"><span class="step-n">01</span><div><h3 data-i18n="sj-s1-t">Investigación con jóvenes y empresas</h3><p data-i18n="sj-s1-p">Empecé entrevistando a 20 jóvenes y 10 empresas. Solo el 47 % de los jóvenes se sentía preparado para trabajar, 1 de cada 3 consideraba ineficaces las herramientas de búsqueda, y las empresas decían que hasta el 70 % de los perfiles que reciben por InfoJobs no son adecuados.</p></div></li>
+      <li class="step"><span class="step-n">02</span><div><h3 data-i18n="sj-s2-t">Dos problemáticas, dos hipótesis</h3><p data-i18n="sj-s2-p">Salieron dos posibles problemas: el desaprovechamiento del talento joven y la falta de compromiso de las empresas con él. Hice una segunda ronda con 9 jóvenes y 21 empresas: el 62 % de las empresas decía tener dificultades para encontrar talento joven y el 58 % de los jóvenes veía ofertas que no encajaban con sus intereses.</p></div></li>
+      <li class="step"><span class="step-n">03</span><div><h3 data-i18n="sj-s3-t">Elegir por dónde empezar</h3><p data-i18n="sj-s3-p">Los expertos recomendaban una solución más simple y centrada en el joven. La otra idea dependía de colaboraciones externas desde el inicio, así que empezamos por la primera, que se podía validar sin depender de terceros.</p></div></li>
+      <li class="step"><span class="step-n">04</span><div><h3 data-i18n="sj-s4-t">La solución: un comparador personalizado</h3><p data-i18n="sj-s4-p">Una plataforma que reúne ofertas de varios portales (LinkedIn, InfoJobs…), personaliza los resultados y ahorra tiempo. Analicé la competencia en cuatro categorías (generalistas, especializadas, comparadores y consultoras) para ver dónde estaba el hueco.</p></div></li>
+      <li class="step"><span class="step-n">05</span><div><h3 data-i18n="sj-s5-t">La web online (MVP)</h3><p data-i18n="sj-s5-p">Publicamos una web sencilla, "Encuentra el empleo perfecto en 3 pasos", que estuvo online y en la que la gente se apuntó: el usuario rellena un formulario, buscamos por él y le enviamos por correo las 5 ofertas más compatibles, con un segundo correo para recoger su opinión. Para mantener las ofertas actualizadas se usó scraping automático con ZenRows.</p></div></li>
+      <li class="step"><span class="step-n">06</span><div><h3 data-i18n="sj-s6-t">Campaña de anuncios</h3><p data-i18n="sj-s6-p">Lanzamos cuatro anuncios para llevar tráfico a la web y medir el interés real. Los anuncios en formato post funcionaron mejor que los stories, el proyecto despertó interés incluso en mayores de 35 años y optimizar los mensajes y el formulario mejoraba los resultados.</p></div></li>
+      <li class="step"><span class="step-n">07</span><div><h3 data-i18n="sj-s7-t">Plan de viabilidad y decisión</h3><p data-i18n="sj-s7-p">Calculé ingresos (publicidad, coste por clic y por registro) frente a costes (mantenimiento, scraping, marketing y personal). La conclusión: la necesidad era real, pero los ingresos eran inestables y los costes altos. Decidimos pausar el proyecto por su baja viabilidad a corto plazo y para evitar riesgos personales.</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2 data-i18n="sj-img-t">Así lo probamos</h2>
+  <div class="caso-imgs">
+    <figure><img src="img/casos/skyjob-mvp.webp" alt="Web online de Skyjob" loading="lazy"><figcaption data-i18n="sj-img-1">La web online</figcaption></figure><figure><img src="img/casos/skyjob-anuncios.webp" alt="Anuncios de prueba de Skyjob" loading="lazy"><figcaption data-i18n="sj-img-2">Anuncios de prueba</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2 data-i18n="sj-apr-t">Qué aprendí</h2>
+  <ul class="aprendizajes">
+    <li data-i18n="sj-a1">Validar antes de construir: una web sencilla y unos anuncios dieron más información que meses de desarrollo.</li><li data-i18n="sj-a2">Decidir con datos, también cuando la respuesta es parar.</li><li data-i18n="sj-a3">Echar en falta la parte técnica me llevó al Máster en Desarrollo Full Stack: June siguió en gestión del talento y yo en tecnología.</li>
+  </ul>
+  <div class="caso-btns">
+    <a class="btn btn-ghost" href="docs/Presentacion_Skyjob_resumen.pdf" target="_blank" rel="noopener" data-i18n="sj-btn-pdf">Leer la presentación (PDF) →</a>
+  </div>
+
+  
+</section>
+
+<footer id="contacto">
+  <h2 data-i18n="contacto-titulo">Contacto</h2>
+  <p class="contact-line"><a href="mailto:mariamurgiondoleturiaga@gmail.com">mariamurgiondoleturiaga@gmail.com</a></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>

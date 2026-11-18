@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maria Murgiondo Leturiaga — Portfolio</title>
+<title>Maria Murgiondo Leturiaga — Full Stack, UX/UI &amp; Data</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,10 +14,10 @@
 
 <nav>
   <a href="#sobre-mi" data-i18n="nav-sobre">Sobre mí</a>
+  <a href="#habilidades" data-i18n="nav-habilidades">Habilidades</a>
   <a href="#experiencia" data-i18n="nav-experiencia">Experiencia</a>
   <a href="#formacion" data-i18n="nav-formacion">Formación</a>
   <a href="#proyectos" data-i18n="nav-proyectos">Proyectos</a>
-  <a href="#galeria" data-i18n="nav-galeria">Galería</a>
   <a href="#contacto" data-i18n="nav-contacto">Contacto</a>
   <button id="lang-toggle" class="lang-toggle" onclick="cambiarIdioma()">EN</button>
 </nav>
@@ -35,16 +35,16 @@
 <!-- CINTA DE HABILIDADES -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track" id="marquee-track">
-    <span data-i18n="mq-1">Gestión de proyectos</span><b>✦</b>
-    <span data-i18n="mq-2">Comunicación y contenidos</span><b>✦</b>
-    <span data-i18n="mq-3">Gestión de stakeholders</span><b>✦</b>
-    <span data-i18n="mq-4">Coordinación de proveedores</span><b>✦</b>
-    <span>SEO</span><b>✦</b>
-    <span>SEM</span><b>✦</b>
+    <span>Full Stack</span><b>✦</b>
+    <span>UX/UI</span><b>✦</b>
     <span>Figma</span><b>✦</b>
-    <span>Angular</span><b>✦</b>
+    <span>JavaScript</span><b>✦</b>
     <span>Node.js</span><b>✦</b>
-    <span>Canva</span><b>✦</b>
+    <span>Angular</span><b>✦</b>
+    <span>SQL</span><b>✦</b>
+    <span>MongoDB</span><b>✦</b>
+    <span>GitHub</span><b>✦</b>
+    <span>Data</span><b>✦</b>
   </div>
 </div>
 
@@ -66,8 +66,19 @@
 
   <div class="stats">
     <div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label" data-i18n="stat-1">empresas reales cofundadas</span></div>
-    <div class="stat"><span class="stat-num" data-count="6">6</span><span class="stat-label" data-i18n="stat-2">proyectos de startups · 2020–2024</span></div>
+    <div class="stat"><span class="stat-num" data-count="12">12</span><span class="stat-label" data-i18n="stat-2">personas usan mi guía de organización de datos</span></div>
     <div class="stat"><span class="stat-num" data-count="4">4</span><span class="stat-label" data-i18n="stat-4">idiomas</span></div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades">
+  <h2 data-i18n="skills-titulo">Habilidades técnicas</h2>
+  <div class="skills-grid">
+    <div><h3 data-i18n="sk-dev">Desarrollo</h3><div class="chips"><span>JavaScript</span><span>Node.js</span><span>Angular</span><span>Java</span><span>HTML &amp; CSS</span><span>Full stack</span></div></div>
+    <div><h3 data-i18n="sk-db">Bases de datos y control de versiones</h3><div class="chips"><span>SQL</span><span>MySQL</span><span>MongoDB</span><span>GitHub</span></div></div>
+    <div><h3 data-i18n="sk-design">Diseño y producto</h3><div class="chips"><span>Figma</span><span data-i18n="sk-interfaces"></span><span data-i18n="sk-journeys"></span><span data-i18n="sk-research"></span><span>SEO</span></div></div>
+    <div><h3 data-i18n="sk-mgmt">Gestión</h3><div class="chips"><span>Jira</span><span>Agile</span><span>Lean Startup</span><span>Design Thinking</span><span>Notion</span><span>Excel</span><span>Microsoft 365</span></div></div>
   </div>
 </section>
 
@@ -88,8 +99,7 @@
       <li data-i18n="exp1-li3">Diseño e impulso de una estrategia de marca (imagen, propuesta de valor, mensajes) por iniciativa propia.</li>
       <li data-i18n="exp1-li4">Elaboración de un toolkit editorial de inversión, incluyendo investigación y redacción estructurada.</li>
       <li data-i18n="exp1-li5">Representación de ScaleUp Porto en ferias de empleo, gestionando el stand y la relación con candidatos.</li>
-      <li data-i18n="exp1-li6">Seguimiento y análisis de convocatorias y oportunidades de financiación para startups.</li>
-    </ul>
+          </ul>
   </div>
   <div class="exp-item">
     <div class="meta">
@@ -114,8 +124,12 @@
     <div>
       <h3 class="col-title" data-i18n="col-formacion">Formación</h3>
       <div class="edu-item">
+        <h3 data-i18n="edu0-titulo">Introducción al Big Data y la Inteligencia Artificial</h3>
+        <div class="school" data-i18n="edu0-escuela">Curso IFCT0138 · Adams · En curso</div>
+      </div>
+      <div class="edu-item">
         <h3 data-i18n="edu1-titulo">Máster en Desarrollo Full Stack</h3>
-        <div class="school">UNIR, Universidad Internacional de La Rioja · 2025–2026</div>
+        <div class="school" data-i18n="edu1-escuela">UNIR · 2025–2026</div>
       </div>
       <div class="edu-item">
         <h3 data-i18n="edu2-titulo">Grado en LEINN</h3>
@@ -142,7 +156,6 @@
     <h2 data-i18n="proyectos-titulo">Proyectos</h2>
     <p class="proyectos-subtitle" data-i18n="proyectos-subtitulo">Desliza para descubrirlos todos →</p>
     <div class="intro-row">
-      <a href="#galeria" class="gallery-link" data-i18n="galeria-link">Ver mis fotos artísticas →</a>
       <div class="track-controls">
         <button type="button" class="tc" id="tc-prev" aria-label="Anterior / Previous">‹</button>
         <button type="button" class="tc" id="tc-next" aria-label="Siguiente / Next">›</button>
@@ -158,18 +171,21 @@
       <p class="tile-desc" data-i18n="p-scaleupfigma-desc">Diseño de la nueva web de ScaleUp Porto en Figma: navegación responsive, sección de eventos y noticias con tarjetas dinámicas, y aplicación de la nueva identidad visual de marca que ayudé a definir.</p>
       <span class="tile-link" data-i18n="tile-figma-link">Ver caso de estudio →</span>
     </a>
-
-    <div class="tile c4">
-      <span class="tile-eyebrow" data-i18n="p-scaleupig-rol">Social Media · Monitorización y contenido</span>
-      <h3 class="tile-title">ScaleUp Porto<br>Instagram</h3>
-      <p class="tile-desc" data-i18n="p-scaleupig-desc">Seguimiento del Instagram de ScaleUp Porto, aportando ideas de contenido y colaborando en las creaciones visuales publicadas en el canal.</p>
-      <div class="tile-skills">
-        <span data-i18n="p-scaleupig-skill1">Social media</span>
-        <span data-i18n="p-scaleupig-skill2">Ideación de contenido</span>
-      </div>
-    </div>
-
-    <div class="tile c1">
+    <a class="tile c3" href="caso-meetandgo.html">
+      <span class="tile-eyebrow" data-i18n="p-viajes-rol">Proyecto final del máster · Full stack</span>
+      <h3 class="tile-title" data-i18n="tile-viajes-titulo">Planificador de viajes</h3>
+      <p class="tile-desc" data-i18n="p-viajes-desc">Aplicación web para planificar y organizar viajes, desarrollada como proyecto final del Máster en Desarrollo Full Stack.</p>
+      <div class="tile-skills"><span>Angular</span><span>Node.js</span><span>MySQL</span></div>
+      <span class="tile-link" data-i18n="tile-caso-link">Ver caso de estudio →</span>
+    </a>
+    <a class="tile c1" href="https://github.com/mariamurgi/mariamurgi.github.io" target="_blank" rel="noopener">
+      <span class="tile-eyebrow" data-i18n="p-portfolio-rol">Proyecto personal · Frontend</span>
+      <h3 class="tile-title" data-i18n="tile-portfolio-titulo">Este portfolio</h3>
+      <p class="tile-desc" data-i18n="p-portfolio-desc">HTML, CSS y JavaScript sin frameworks: interacciones al hacer scroll, versión bilingüe ES/EN y diseño responsive, publicado en GitHub Pages.</p>
+      <div class="tile-skills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <span class="tile-link" data-i18n="tile-codigo-link">Ver el código →</span>
+    </a>
+    <a class="tile c4" href="caso-skyjob.html">
       <span class="tile-eyebrow" data-i18n="p-skyjob-rol">Trabajo de Fin de Grado · Producto digital</span>
       <h3 class="tile-title">Skyjob</h3>
       <p class="tile-desc" data-i18n="p-skyjob-desc">Plataforma digital de comparación de empleo pensada para jóvenes sin experiencia previa, con una campaña de anuncios SEM y una estrategia de marketing propia para darle visibilidad al proyecto.</p>
@@ -177,43 +193,9 @@
         <span data-i18n="p-skyjob-skill1">Estrategia SEM</span>
         <span data-i18n="p-skyjob-skill2">Marketing digital</span>
       </div>
-    </div>
-
-    <div class="tile c2 has-sticker">
-      <img class="sticker st-1" src="img/stickers/botella-negra.webp" alt="" loading="lazy" draggable="false">
-      <img class="sticker st-2" src="img/stickers/botella-roja.webp" alt="" loading="lazy" draggable="false">
-      <span class="tile-eyebrow" data-i18n="p-suliit-rol">Communication Lead · Product design</span>
-      <h3 class="tile-title">Suliit</h3>
-      <p class="tile-desc" data-i18n="p-suliit-desc">Proyecto creado para demostrar que un cambio significativo puede empezar con pequeñas acciones: botellas reutilizables de acero inoxidable, con diseños predefinidos y opción de personalización total.</p>
-      <div class="tile-skills">
-        <span data-i18n="p-suliit-skill1">Gestión de clientes y proveedores</span>
-        <span data-i18n="p-suliit-skill3">Creatividad</span>
-      </div>
-    </div>
-
-    <div class="tile c3 has-sticker">
-      <img class="sticker st-1" src="img/stickers/panuelo-1.webp" alt="" loading="lazy" draggable="false">
-      <img class="sticker st-2" src="img/stickers/panuelo-2.webp" alt="" loading="lazy" draggable="false">
-      <span class="tile-eyebrow" data-i18n="p-velti-rol">Project &amp; Financial Lead · Product design</span>
-      <h3 class="tile-title">Velti</h3>
-      <p class="tile-desc" data-i18n="p-velti-desc">Proyecto para promover el #buylessbuywell: pañuelos versátiles diseñados para poder llevarse de 1.000 formas distintas, como alternativa al consumo masivo.</p>
-      <div class="tile-skills">
-        <span data-i18n="p-velti-skill1">Gestión financiera</span>
-        <span data-i18n="p-velti-skill2">Diseño de producto</span>
-      </div>
-    </div>
-
-    <div class="tile c4">
-      <span class="tile-eyebrow" data-i18n="p-natives-rol">Project Lead · Servicio educativo</span>
-      <h3 class="tile-title">nativES</h3>
-      <p class="tile-desc" data-i18n="p-natives-desc">Servicio para poner en práctica lo aprendido en idiomas a través de competiciones, juegos y conversaciones con hablantes nativos, frente al problema global de no practicar lo estudiado.</p>
-      <div class="tile-skills">
-        <span data-i18n="p-natives-skill1">Diseño de experiencia de usuario</span>
-        <span data-i18n="p-natives-skill2">Comunicación</span>
-      </div>
-    </div>
-
-    <div class="tile c1">
+      <span class="tile-link" data-i18n="tile-caso-link">Ver caso de estudio →</span>
+    </a>
+    <div class="tile c2">
       <span class="tile-eyebrow" data-i18n="p-tekirola-rol">Proyecto colaborativo · Transformación digital</span>
       <h3 class="tile-title">Tekirola</h3>
       <p class="tile-desc" data-i18n="p-tekirola-desc">Estudios y soluciones digitales personalizadas para organizaciones deportivas, con el objetivo de identificar necesidades y diseñar estrategias de transformación digital para el sector.</p>
@@ -222,18 +204,6 @@
         <span>UX</span>
       </div>
     </div>
-
-    <div class="tile c2">
-      <span class="tile-eyebrow" data-i18n="p-ikusmin-rol">Communication Lead · Servicio cultural</span>
-      <h3 class="tile-title">Ikusmin</h3>
-      <p class="tile-desc" data-i18n="p-ikusmin-desc">Proyecto para promover la lectura y escritura en euskera entre jóvenes, incorporando nuevas tecnologías al proceso creativo. Impacto: 16 jóvenes participantes.</p>
-      <div class="tile-skills">
-        <span data-i18n="p-ikusmin-skill1">Facilitación de sesiones</span>
-        <span>Design thinking</span>
-      </div>
-      <a class="tile-link tile-ext" href="https://www.diariovasco.com/alto-deba/onati/proyecto-ikusmin-promueve-lectura-escritura-euskera-jovenes-20240207205713-nt.html" target="_blank" rel="noopener" data-i18n="tile-noticia-link">Leer la noticia →</a>
-    </div>
-
     <div class="tile c3">
       <span class="tile-eyebrow" data-i18n="p-konekta-rol">Financial Lead · Servicio tecnológico</span>
       <h3 class="tile-title">Konekta-Tu</h3>
@@ -250,36 +220,18 @@
 </section>
 
 
-<!-- GALERIA -->
-<section id="galeria">
-  <h2 data-i18n="galeria-titulo">Galería</h2>
-  <p style="color: var(--muted); margin: 10px 0 40px;" data-i18n="galeria-desc">Una selección de mis fotos artísticas.</p>
-  <div class="carousel" id="carousel">
-    <button class="carousel-btn prev" onclick="moverCarrusel(-1)">‹</button>
-    <button class="carousel-btn next" onclick="moverCarrusel(1)">›</button>
-  </div>
-  <div class="carousel-counter"><span id="counter-current">1</span> / <span id="counter-total"></span></div>
-  <p class="carousel-hint" data-i18n="galeria-hint">Haz clic en una foto para verla en grande</p>
-</section>
-
-<!-- VISTA AMPLIADA DE LA GALERÍA -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Cerrar / Close">×</button>
-  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Anterior / Previous">‹</button>
-  <img id="lb-img" alt="">
-  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Siguiente / Next">›</button>
-  <div class="lb-counter" id="lb-counter"></div>
-</div>
-
 <!-- CONTACTO -->
 <footer id="contacto">
   <h2 data-i18n="contacto-titulo">Contacto</h2>
   <p class="contact-line" data-i18n="contacto-direccion">Oñati, Gipuzkoa (España)</p>
   <p class="contact-line"><a href="mailto:mariamurgiondoleturiaga@gmail.com">mariamurgiondoleturiaga@gmail.com</a></p>
   <p class="contact-line">(+34) 634 444 509</p>
+  <p class="contact-line"><a href="https://github.com/mariamurgi" target="_blank" rel="noopener">GitHub</a></p>
+  <p class="contact-line"><a href="https://www.linkedin.com/in/maria-murgiondo-leturiaga-5a56791b8" target="_blank" rel="noopener">LinkedIn</a></p>
+  <p class="contact-line"><a href="cv/CV_Maria_Murgiondo_UX_FullStack_EN.pdf" target="_blank" rel="noopener" data-i18n="cv-link">Descargar CV (PDF, inglés)</a></p>
+  <p class="contact-line"><a class="cross-link" href="https://mariamurgi.github.io/portfolio-pm/" data-i18n="cross-link"></a></p>
 </footer>
 
-<script src="script.js"></script>
 <script src="i18n.js"></script>
 <script src="animaciones.js"></script>
 </body>

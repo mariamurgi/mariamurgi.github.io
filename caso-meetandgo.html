@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet&amp;Go — Caso de estudio · Maria Murgiondo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="caso">
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html#proyectos" data-i18n="caso-back">← Volver al portfolio</a>
+  <button id="lang-toggle" class="lang-toggle" onclick="cambiarIdioma()">EN</button>
+</nav>
+
+<header class="caso-hero">
+  <p class="tile-eyebrow" data-i18n="mg-eyebrow">Proyecto final del Máster · Full stack</p>
+  <h1>Meet&amp;Go</h1>
+  <p class="caso-lead" data-i18n="mg-lead">Una plataforma web para crear, compartir y gestionar viajes en grupo. Un proyecto en equipo, desarrollado de principio a fin y desplegado en un entorno real.</p>
+  <div class="caso-meta"><div><span class="m-t" data-i18n="mg-m1-t">Rol</span><strong data-i18n="mg-m1-v">Desarrolladora frontend</strong></div><div><span class="m-t" data-i18n="mg-m2-t">Equipo</span><strong data-i18n="mg-m2-v">7 personas: frontend, backend y base de datos</strong></div><div><span class="m-t" data-i18n="mg-m3-t">Tecnologías</span><strong data-i18n="mg-m3-v">Angular · Node.js y Express · MySQL · GitHub</strong></div><div><span class="m-t" data-i18n="mg-m4-t">Año</span><strong data-i18n="mg-m4-v">2025</strong></div></div>
+</header>
+
+<section>
+  <div class="stats"><div class="stat"><span class="stat-num" data-count="7">7</span><span class="stat-label" data-i18n="mg-st1">personas en el equipo</span></div><div class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label" data-i18n="mg-st2">áreas técnicas coordinadas</span></div><div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label" data-i18n="mg-st3">repositorios: frontend y backend por separado</span></div></div>
+</section>
+
+<section>
+  <h2 data-i18n="mg-prob-t">Problemática y oportunidad</h2>
+  <p data-i18n="mg-prob-p">Viajar en grupo sigue siendo complejo por la falta de una plataforma única que conecte a personas con intereses comunes y centralice la planificación, la gestión de participantes, la comunicación y los gastos compartidos. Nuestra oportunidad: unir viajes y economía colaborativa en un solo lugar, basado en la confianza y la transparencia.</p>
+</section>
+
+<section>
+  <h2 data-i18n="mg-pro-t">Cómo lo hicimos</h2>
+  <ol class="steps">
+      <li class="step"><span class="step-n">01</span><div><h3 data-i18n="mg-s1-t">Qué hace la app</h3><p data-i18n="mg-s1-p">El usuario crea un viaje (destino, fechas, plazas, coste estimado, transporte y alojamiento), se publica en un listado con búsqueda por destino, fechas o ciudad de salida, y otros usuarios pueden solicitar unirse. El creador acepta o rechaza solicitudes, así que controla quién forma parte del grupo.</p></div></li>
+      <li class="step"><span class="step-n">02</span><div><h3 data-i18n="mg-s2-t">Notificaciones y foro del viaje</h3><p data-i18n="mg-s2-p">La app envía emails para verificar el registro y avisar de cambios de fecha o solicitudes. Cada viaje tiene un foro interno, solo accesible para sus miembros, donde publicar mensajes y responder.</p></div></li>
+      <li class="step"><span class="step-n">03</span><div><h3 data-i18n="mg-s3-t">Mi parte: frontend</h3><p data-i18n="mg-s3-p">Trabajé en el frontend con otros dos compañeros: una interfaz clara y minimalista, navegación intuitiva y diseño responsive pensado para móvil y escritorio, inspirado en apps modernas de viajes y redes sociales.</p></div></li>
+      <li class="step"><span class="step-n">04</span><div><h3 data-i18n="mg-s4-t">Tecnologías y despliegue</h3><p data-i18n="mg-s4-p">Frontend en Angular desplegado en Netlify, backend en Node.js con Express desplegado en Render y base de datos MySQL en Aiven. Frontend y backend viven en repositorios de GitHub separados.</p></div></li>
+      <li class="step"><span class="step-n">05</span><div><h3 data-i18n="mg-s5-t">Organización del equipo</h3><p data-i18n="mg-s5-p">Nos repartimos por áreas (backend, frontend y base de datos) con reuniones semanales de todo el grupo y de cada subgrupo. Usamos Trello para repartir tareas cada semana, WhatsApp y el foro de la UNIR para comunicarnos, y actas de cada reunión en un documento compartido; las reuniones se grababan para quien no podía asistir.</p></div></li>
+      <li class="step"><span class="step-n">06</span><div><h3 data-i18n="mg-s6-t">Próximos pasos</h3><p data-i18n="mg-s6-p">Las líneas futuras son un match de viajeros por afinidad (edad, intereses, presupuesto), favoritos y recomendaciones personalizadas, integración con APIs externas (mapas y pagos) y mejoras de rendimiento con cacheo y un backend más modular.</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2 data-i18n="mg-img-t">Presentación del proyecto</h2>
+  <div class="caso-imgs">
+    <figure><a href="docs/Presentacion_MeetAndGo.pdf" target="_blank" rel="noopener"><img src="img/casos/meetgo-portada.webp" alt="Portada de la presentación de Meet&Go" loading="lazy"></a><figcaption data-i18n="mg-img-1">Portada de la presentación del TFM</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2 data-i18n="mg-apr-t">Qué aprendí</h2>
+  <ul class="aprendizajes">
+    <li data-i18n="mg-a1">A diseñar de forma modular y mantenible con Git, a trabajar con bases de datos relacionales y a implementar autenticación y despliegue.</li><li data-i18n="mg-a2">La importancia de una comunicación clara y de usar bien cada canal en un equipo de siete.</li><li data-i18n="mg-a3">A adaptarme a cambios y a distintas formas de trabajar sin perder el ritmo.</li>
+  </ul>
+  <div class="caso-btns">
+    <a class="btn btn-ghost" href="docs/Presentacion_MeetAndGo.pdf" target="_blank" rel="noopener" data-i18n="mg-btn-pdf">Leer la presentación (PDF) →</a>
+    <a class="btn" href="https://meetandgo.netlify.app/" target="_blank" rel="noopener" data-i18n="mg-btn">Ver la app en vivo →</a>
+  </div>
+</section>
+
+<footer id="contacto">
+  <h2 data-i18n="contacto-titulo">Contacto</h2>
+  <p class="contact-line"><a href="mailto:mariamurgiondoleturiaga@gmail.com">mariamurgiondoleturiaga@gmail.com</a></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>
